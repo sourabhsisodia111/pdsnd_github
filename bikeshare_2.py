@@ -40,15 +40,15 @@ def get_filter_city():
     # ask user to input a number for a city from the list; easier for user than string input
     while True:
         try:
-            city_num = int(input("\n    Enter a number for the city (1 - {}):  ".format(len(cities_list))))
+            City_Num = int(input("\n    Enter a number for the city (1 - {}):  ".format(len(cities_list))))
         except:
             continue
 
-        if city_num in range(1, len(cities_list)+1):
+        if City_Num in range(1, len(cities_list)+1):
             break
 
     # get the city's name in string format from the list
-    city = cities_list[city_num - 1]
+    city = cities_list[City_Num - 1]
     return city
 
 

@@ -2,7 +2,7 @@ import time
 import pandas as pd
 import numpy as np
 
-CITY_DATA = { 'chicago': '.\data\chicago.csv',
+City_Data = { 'chicago': '.\data\chicago.csv',
               'new york city': '.\data\\new_york_city.csv',
               'washington': '.\data\washington.csv' }
 
@@ -32,7 +32,7 @@ def get_filter_city():
     cities_list = []
     num_cities = 0
 
-    for a_city in CITY_DATA:
+    for a_city in City_Data:
         cities_list.append(a_city)
         num_cities += 1
         print('        {0:20}. {1}'.format(num_cities, a_city.title()))
@@ -172,7 +172,7 @@ def load_data(city, month, day):
     start_time = time.time()
 
     # load data file into a dataframe
-    df = pd.read_csv(CITY_DATA[city])
+    df = pd.read_csv(City_Data[city])
 
     # convert the Start Time column to datetime
     df['Start Time'] = pd.to_datetime(df['Start Time'], errors='coerce')
